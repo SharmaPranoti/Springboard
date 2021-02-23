@@ -113,14 +113,14 @@ final_data = properties_in_borough
 
 ''' *************     2.6 Visualising the Data ************************'''
 
-print((final_data[final_data.London_Boroughs =='Brent']).count())
+print((final_data[final_data.London_Boroughs =='Camden']).count())
 
-brent_values = final_data[final_data['London_Boroughs']=='Brent']
+brent_values = final_data[final_data['London_Boroughs']=='Camden']
 print(brent_values)
 
 
 #plot the graph to analyse the data of Barnet 
-graph = brent_values.plot(kind='line', x='Months',y='Average_Value', title='Change In Average Price over Months For Brent')
+graph = brent_values.plot(kind='line', x='Months',y='Average_Value', title='Change In Average Price over Months For Camden')
 graph.set_ylabel('Average Value')
 plt.show()
 
@@ -159,24 +159,20 @@ for val in grouped_data['London_Boroughs'].unique():
     
 
 
-#Convert the dictionary into Data Frame
-#average_ratio_df = pd.DataFrame(average_ratio_data)
-print(average_ratio_data)
+#Convert the dictionary into Data Frame and extract top15 records
 
-
-average_ratio_df = pd.DataFrame(average_ratio_data.items(), columns=['London_Boroughs','2018']).sort_values(by='2018',ascending=False)
-print(average_ratio_df)
+top15_records = pd.DataFrame(average_ratio_data.items(), columns=['London_Boroughs','2018']).sort_values(by='2018',ascending=False).head(15)
+print(top15_records)
 
 
 #Graph the results to derive the conclusion
-'''final_graph = average_ratio_df.plot(kind='line', x='London_Boroughs', y='Average_Ratio',title='Change in Average Price Ratios for the year 2018 & 1998 ' )
-final_graph.set_ylabel('Average Price Ration')
-plt.show()'''
-
-
+'''
 final_bar_graph = average_ratio_df.head(15).plot(kind='bar', x='London_Boroughs', y='2018',title='Change in Average Price Ratios for the year 2018 & 1998 ')
 final_bar_graph.set_ylabel('Average Price Ratio')
-plt.show()
+plt.show()'''
+
+final_graph = top15_records[['London_Boroughs', '2018']].plot(kind='bar', x='London_Boroughs')
+
 
 
 
