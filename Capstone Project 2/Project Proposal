@@ -1,0 +1,32 @@
+Capstone 2 Project Proposal
+
+
+Title: Stroke Prediction Model
+
+Problem: Stroke is the sudden death of some brain cells due to lack of oxygen when the blood flow to the brain is lost by blockage or rupture of an artery to the brain. According to the World Health Organization (WHO) stroke is the 3rd leading cause of death and 2nd leading cause of disability worldwide. It is also a leading cause of dementia and depression. According to the WHO stroke is responsible for 11% of total deaths world wide.
+Identifying if a person can get stroke will help the health care professionals to come up and suggest effective prevention strategies including lifestyle changes. WHO studies have found that preventive strategies have proved effective in reducing stroke mortality. 
+
+Purpose: Create a stroke prediction model to find out if a person is at risk to get stroke based on the biological parameters like, age, gender, existing diseases and smoking status.
+
+Criteria of success: Identification of high risk person.
+
+Use: Health care practitioners, patients/individuals.
+
+Limitation: The existing diseases are limited to hypertension, heart conditions, diabetes. Any other diseases are not taken into consideration due to unavailability of data. The model is designed with gender type as only ‘male’ and ‘female’. The dataset does not have the information on non binary gender data.
+
+Data: The data set is collected from Kaggle. The data set is structured and contains 5110 observations. These observations contains the information about patient biological parameters like, Gender, Age, BMI. It contains the patients life style related data such as work type, residence type, smoking habit, marital status.
+
+Modeling Approach: I will be using classification algorithm to create a supervised learning model to solve this use case. I will be munging the dataset from the source and perform the initial analysis to check for the data quality. I will then perform the data cleaning. Once the data is cleaned I will perform the exploratory data analysis to understand the correlation and identify the hyper parameters. I will use the hyper parameters to subset my dataset.  I will be using the classification algorithm to design the model and validate it. I will split the dataset into training and test and train the model on the training data set and validate the outcome using the test dataset. 
+Note: Supervised learning model are the machine learning model which are used to predict the outcome based on the model training using the known/existing data. Different types of mathematical algorithms are used for training to get the prediction outcome. The classification algorithm in particular predicts one or more outcome.
+
+Deliverables: 
+Following deliverables will be shared on GitHub
+Codes (as notebooks):
+Data Wrangling
+Data Cleaning 
+Exploratory Data Analysis
+Data Modeling
+Report
+Presentation
+
+
